@@ -1,0 +1,57 @@
+body{
+    background-color: #dedede;
+    width: 100%;
+}
+
+:focus{
+    outline: none;
+}
+
+div#wrap{
+    width: 98%;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    font-size: 2em;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+section.parent{
+    width: 90%;
+    margin: 0 auto;
+    border:2px dotted #666666;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+section.child{
+    margin-bottom: 10px;
+}
+
+section h2{
+    font-weight: bold;
+    border-bottom: 1px solid #666666;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+}
+
+div#memoarea{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+textarea{
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    height: 240px;
+    border:1px dotted #666666;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+    resize: none;
+}

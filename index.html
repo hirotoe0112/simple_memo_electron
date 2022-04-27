@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+        <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+        <meta name="viewport" content="initial-scale=1.0">
+        <title>simple memo</title>
+        <link rel="stylesheet" href="./destyle.min.css">
+        <link rel="stylesheet" href="./layout.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <h1>memo</h1>
+            <div id="memoarea">
+                <textarea></textarea>
+            </div>
+            <section class="parent">
+                <h2>About this App</h2>
+                <section class="child">
+                    <div>
+                        This application is a simple memo app.
+                    </div>
+                </section>
+                <h2>Usage</h2>
+                <section class="child">
+                    <div>
+                        Enter text in the text area.<br>
+                        The text will be saved automatically.
+                    </div>
+                </section>
+                <h2>Component Version</h2>
+                <section class="child">
+                    <div>
+                        Node:<span id="node-version"></span>
+                    </div>
+                    <div>
+                        Chromium:<span id="chrome-version"></span>
+                    </div>
+                    <div>
+                        Electron:<span id="electron-version"></span>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </body>
+</html>
+<script src="./renderer.js"></script>
