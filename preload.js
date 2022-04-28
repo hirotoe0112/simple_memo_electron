@@ -3,6 +3,9 @@ const { contextBridge, ipcRenderer } = require('electron');
 contextBridge.exposeInMainWorld('electronAPI', {
     changeText:(text) => {
         ipcRenderer.send('change-text', text);
+    },
+    onRestoreText:(callback) => {
+        ipcRenderer.on('restore-text', callback);
     }
 });
 
@@ -14,5 +17,4 @@ window.addEventListener('DOMContentLoaded', () => {
     for(const dependency of ['chrome', 'node', 'electron']){
         replaceText(`${dependency}-version`, process.versions[dependency]);
     }
-    var textarea = document.querySelector('#memoarea textarea');
 });

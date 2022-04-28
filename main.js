@@ -27,6 +27,15 @@ const createWindow = () => {
     });
 
     win.loadFile('index.html');
+
+    fs.readFile('./save.txt', 'utf-8', (err, data) => {
+        if(err){
+            console.log(err);
+            return;
+        }
+        savetext = data;
+        win.webContents.send('restore-text', data);
+    });
 }
 
 

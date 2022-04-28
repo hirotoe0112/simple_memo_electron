@@ -4,3 +4,8 @@ textarea.addEventListener('input', () => {
     const text = textarea.value;
     window.electronAPI.changeText(text);
 });
+textarea.focus();
+
+window.electronAPI.onRestoreText((_event, value) => {
+    textarea.value = value;
+});
